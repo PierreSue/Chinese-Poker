@@ -1,0 +1,93 @@
+# Project: POKER
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = CprAiPlayer.o CprCard.o CprCollection.o CprFlushMaster.o CprFourOfAKindMaster.o CprFullHouseMaster.o CprGame.o CprHand.o CprHandMaster.o CprHighCardMaster.o CprOnePairMaster.o CprPlayer.o CprStage.o CprStraightFlushMaster.o CprStraightMaster.o CprThreeOfAKindMaster.o CprTwoPairMaster.o main.o CprHumanPlayer.o CprGreedyAi.o CprDealer.o CprCustomAi.o $(RES)
+LINKOBJ  = CprAiPlayer.o CprCard.o CprCollection.o CprFlushMaster.o CprFourOfAKindMaster.o CprFullHouseMaster.o CprGame.o CprHand.o CprHandMaster.o CprHighCardMaster.o CprOnePairMaster.o CprPlayer.o CprStage.o CprStraightFlushMaster.o CprStraightMaster.o CprThreeOfAKindMaster.o CprTwoPairMaster.o main.o CprHumanPlayer.o CprGreedyAi.o CprDealer.o CprCustomAi.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = POKER.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before POKER.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "POKER.exe" $(LIBS)
+
+CprAiPlayer.o: CprAiPlayer.cpp
+	$(CPP) -c CprAiPlayer.cpp -o CprAiPlayer.o $(CXXFLAGS)
+
+CprCard.o: CprCard.cpp
+	$(CPP) -c CprCard.cpp -o CprCard.o $(CXXFLAGS)
+
+CprCollection.o: CprCollection.cpp
+	$(CPP) -c CprCollection.cpp -o CprCollection.o $(CXXFLAGS)
+
+CprFlushMaster.o: CprFlushMaster.cpp
+	$(CPP) -c CprFlushMaster.cpp -o CprFlushMaster.o $(CXXFLAGS)
+
+CprFourOfAKindMaster.o: CprFourOfAKindMaster.cpp
+	$(CPP) -c CprFourOfAKindMaster.cpp -o CprFourOfAKindMaster.o $(CXXFLAGS)
+
+CprFullHouseMaster.o: CprFullHouseMaster.cpp
+	$(CPP) -c CprFullHouseMaster.cpp -o CprFullHouseMaster.o $(CXXFLAGS)
+
+CprGame.o: CprGame.cpp
+	$(CPP) -c CprGame.cpp -o CprGame.o $(CXXFLAGS)
+
+CprHand.o: CprHand.cpp
+	$(CPP) -c CprHand.cpp -o CprHand.o $(CXXFLAGS)
+
+CprHandMaster.o: CprHandMaster.cpp
+	$(CPP) -c CprHandMaster.cpp -o CprHandMaster.o $(CXXFLAGS)
+
+CprHighCardMaster.o: CprHighCardMaster.cpp
+	$(CPP) -c CprHighCardMaster.cpp -o CprHighCardMaster.o $(CXXFLAGS)
+
+CprOnePairMaster.o: CprOnePairMaster.cpp
+	$(CPP) -c CprOnePairMaster.cpp -o CprOnePairMaster.o $(CXXFLAGS)
+
+CprPlayer.o: CprPlayer.cpp
+	$(CPP) -c CprPlayer.cpp -o CprPlayer.o $(CXXFLAGS)
+
+CprStage.o: CprStage.cpp
+	$(CPP) -c CprStage.cpp -o CprStage.o $(CXXFLAGS)
+
+CprStraightFlushMaster.o: CprStraightFlushMaster.cpp
+	$(CPP) -c CprStraightFlushMaster.cpp -o CprStraightFlushMaster.o $(CXXFLAGS)
+
+CprStraightMaster.o: CprStraightMaster.cpp
+	$(CPP) -c CprStraightMaster.cpp -o CprStraightMaster.o $(CXXFLAGS)
+
+CprThreeOfAKindMaster.o: CprThreeOfAKindMaster.cpp
+	$(CPP) -c CprThreeOfAKindMaster.cpp -o CprThreeOfAKindMaster.o $(CXXFLAGS)
+
+CprTwoPairMaster.o: CprTwoPairMaster.cpp
+	$(CPP) -c CprTwoPairMaster.cpp -o CprTwoPairMaster.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+CprHumanPlayer.o: CprHumanPlayer.cpp
+	$(CPP) -c CprHumanPlayer.cpp -o CprHumanPlayer.o $(CXXFLAGS)
+
+CprGreedyAi.o: CprGreedyAi.cpp
+	$(CPP) -c CprGreedyAi.cpp -o CprGreedyAi.o $(CXXFLAGS)
+
+CprDealer.o: CprDealer.cpp
+	$(CPP) -c CprDealer.cpp -o CprDealer.o $(CXXFLAGS)
+
+CprCustomAi.o: CprCustomAi.cpp
+	$(CPP) -c CprCustomAi.cpp -o CprCustomAi.o $(CXXFLAGS)
